@@ -24,16 +24,16 @@ async function getMovies() {
 
   return data.results
 }
-  ///////////////Fetch de Generos//////////////////////
+///////////////Fetch de Generos//////////////////////
 
-  async function getGenres() {
-    const response = await fetch(
-      `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=pt-BR`
-    )
-    const data = await response.json()
-    console.log(data.genres)
-    return data.genres
-  }
+async function getGenres() {
+  const response = await fetch(
+    `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=pt-BR`
+  )
+  const data = await response.json()
+  console.log(data.genres)
+  return data.genres
+}
 
 
 export default async function Home() {

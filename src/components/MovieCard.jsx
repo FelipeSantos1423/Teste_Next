@@ -1,4 +1,5 @@
 import '../app/globals.css'
+import Link from "next/link"
 
 /////////////Relacionar Gêneros////////////////////////
 
@@ -14,6 +15,7 @@ export default async function MovieCard({ movies, genres }) {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6 object-cover">
             {movies.map((movie) => (
+               <Link key={movie.id} href={`/movie/${movie.id}`}>
                 <div
                     key={movie.id}
                     className="bg-zinc-900 p-4 rounded-xl mb-4 w-full h-full flex flex-col items-center cursor-pointer transition-transform duration-300 hover:scale-105"
@@ -38,6 +40,7 @@ export default async function MovieCard({ movies, genres }) {
                         ⭐ {movie.vote_average.toFixed(1)} / 10 
                     </p>
                 </div>
+            </Link>
             ))}
         </div>
     )
