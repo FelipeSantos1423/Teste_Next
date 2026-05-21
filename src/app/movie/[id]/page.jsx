@@ -15,25 +15,25 @@ export default async function MovieDetails({ params }) {
                     <img
                         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                         alt={movie.title}
-                        className="w-64 md:w-72 lg:w-76 rounded-lg lg:rounded-2xl"
+                        className="w-64 md:w-72 lg:w-76 rounded-lg lg:rounded-2xl shadow-md lg:shadow-lg transition-transform duration-300 hover:scale-105"
                     />
                 </div>
                 <div className="flex flex-col gap-4 lg:gap-6 text-center md:text-left">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">{movie.title}</h1>
 
-                    <p className="text-sm md:text-base lg:text-lg text-gray-400">
+                    <p className="text-lg lg:text-xl text-gray-400">
                         <strong className="text-white">Lançamento:</strong> {movie.release_date}
                     </p>
 
                     <p className="text-lg lg:text-xl text-yellow-400">
-                        ⭐ {movie.vote_average?.toFixed(1)} / 10
+                       <strong className="text-white">Nota:</strong> ⭐ {movie.vote_average?.toFixed(1)} / 10
                     </p>
 
-                    <p className="text-sm md:text-base lg:text-lg text-red-400">
-                        {movie.genres?.map((g) => g.name).join(" • ")}
+                    <p className="text-lg lg:text-xl text-red-400">
+                      <strong className="text-white">Gênero:</strong> {movie.genres?.map((g) => g.name).join(" • ")}
                     </p>
 
-                    <p className="text-sm md:text-base lg:text-lg text-gray-300 leading-relaxed">
+                    <p className="text-lg lg:text-xl text-gray-300 leading-relaxed">
                        <strong className="text-white">Sinopse:</strong>  {movie.overview}
                     </p>
                 </div>
