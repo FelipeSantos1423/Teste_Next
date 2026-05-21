@@ -12,7 +12,7 @@ import '../app/globals.css'
 
 export default async function Movies({ movies, genres }) {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6 object-cover">
             {movies.map((movie) => (
                 <div
                     key={movie.id}
@@ -26,10 +26,16 @@ export default async function Movies({ movies, genres }) {
                         {movie.title}
                     </h2>
                     <p className="text-sm text-gray-400 mb-2">
+                        {movie.realese_date}
+                        </p>
+                    <p className="text-sm text-gray-400 mb-2">
                         {movie.release_date}
                     </p>
-                    <p className="text-sm text-gray-400 mb-2">
+                    <p className="text-sm text-red-500 mb-2">
                         {getGenreName(movie.genre_ids, genres)}
+                    </p>
+                   <p className="text-sm text-yellow-400 mb-2">
+                        ⭐ {movie.vote_average.toFixed(1)} / 10 
                     </p>
                 </div>
             ))}
