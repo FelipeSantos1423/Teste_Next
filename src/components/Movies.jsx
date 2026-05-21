@@ -1,6 +1,16 @@
 import '../app/globals.css'
 
-export default async function Movies({ movies }) {
+/////////////Relacionar Gêneros////////////////////////
+
+  function getGenreName(genreId, genres) {
+    return genreId.map((id) => {
+      const genre = genres.find((g) => g.id === id)
+      return genre ? genre.name : ""
+  })
+  .join(" • ")
+}
+
+export default async function Movies({ movies, genres }) {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {movies.map((movie) => (
@@ -19,7 +29,7 @@ export default async function Movies({ movies }) {
                         {movie.release_date}
                     </p>
                     <p className="text-sm text-gray-400 mb-2">
-                        {movie.genre}
+                        {getGenreName(movie.genre_ids, genres)}
                     </p>
                 </div>
             ))}

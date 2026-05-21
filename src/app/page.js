@@ -35,15 +35,6 @@ async function getMovies() {
     return data.genres
   }
 
-  /////////////Relacionar Gêneros////////////////////////
-
-  function getGenreName(genreId, genres) {
-    return genresIds.map((id) => {
-      const genre = genres.find((g) => g.id === id)
-      return genre ? genre.name : ""
-  })
-  .join(" • ")
-}
 
 export default async function Home() {
 
@@ -57,7 +48,7 @@ export default async function Home() {
       <main className="bg-white min-h-screen p-10 text-black">
         <h1 className="text-2xl font-bold mb-4 text-center my-2">Filmes Populares</h1>
 
-        <Movies movies={movies} />
+        <Movies movies={movies} genres={genres} />
       </main>
     </div>
   )
