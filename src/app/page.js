@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar"
 import "./globals.css"
+import Movies from "../components/Movies"
 
 /*Puxando a chave da API do .env.local para o console, 
 para verificar se está funcionando corretamente.
@@ -11,6 +12,10 @@ async function getMovies() {
     `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.NEXT_PUBLIC_API_KEY}`
   )
 
+  if (!response.ok) {
+    throw new Error("Erro ao buscar filmes")
+  }
+
   const data = await response.json()
 
   /*Exibindo os resultados no console para verificar se a requisição 
@@ -19,8 +24,6 @@ async function getMovies() {
 
   return data.results
 }
-
-getMovies()
 
 export default async function Home() {
 
@@ -31,15 +34,9 @@ export default async function Home() {
       <Navbar />
 
       <main className="bg-white min-h-screen p-10 text-black">
-        <h1>MAIN</h1>
+        <h1 className="text-2xl font-bold mb-4 text-center my-2">Filmes em Destaque</h1>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {movies.map((movie) => (
-          <h2 key={movie.id}>
-            {movie.title}
-          </h2>
-        ))}
-        </div>
+        <Movies movies={movies} />
       </main>
     </div>
   )
