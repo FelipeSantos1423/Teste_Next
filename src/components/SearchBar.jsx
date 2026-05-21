@@ -1,5 +1,5 @@
 import '../app/globals.css'
-export default function Navbar() {
+export default function SearchBar() {
   return (
     
    <nav className="flex justify-between items-center p-6 w-full"

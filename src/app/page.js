@@ -1,6 +1,6 @@
-import Navbar from "../components/Navbar"
+import SearchBar from "../components/SearchBar"
 import "./globals.css"
-import Movies from "../components/Movies"
+import MovieCard from "../components/MovieCard"
 
 /*Puxando a chave da API do .env.local para o console, 
 para verificar se está funcionando corretamente.
@@ -43,12 +43,12 @@ export default async function Home() {
 
   return (
     <div>
-      <Navbar />
+      <SearchBar />
 
       <main className="bg-white min-h-screen p-10 text-black">
         <h1 className="text-2xl font-bold mb-4 text-center my-2">Filmes Populares</h1>
 
-        <Movies movies={movies} genres={genres} />
+        <MovieCard movies={movies} genres={genres} />
       </main>
     </div>
   )
