@@ -24,10 +24,31 @@ async function getMovies() {
 
   return data.results
 }
+  ///////////////Fetch de Generos//////////////////////
+
+  async function getGenres() {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=pt-BR`
+    )
+    const data = await response.json()
+    console.log(data.genres)
+    return data.genres
+  }
+
+  /////////////Relacionar Gêneros////////////////////////
+
+  function getGenreName(genreId, genres) {
+    return genresIds.map((id) => {
+      const genre = genres.find((g) => g.id === id)
+      return genre ? genre.name : ""
+  })
+  .join(" • ")
+}
 
 export default async function Home() {
 
   const movies = await getMovies()
+  const genres = await getGenres()
 
   return (
     <div>

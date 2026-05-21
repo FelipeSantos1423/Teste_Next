@@ -18,6 +18,9 @@ export default async function Movies({ movies }) {
                     <p className="text-sm text-gray-400 mb-2">
                         {movie.release_date}
                     </p>
+                    <p className="text-sm text-gray-400 mb-2">
+                        {movie.genre}
+                    </p>
                 </div>
             ))}
         </div>
