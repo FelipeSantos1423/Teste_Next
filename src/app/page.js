@@ -9,7 +9,7 @@ console.log(process.env.NEXT_PUBLIC_API_KEY)*/
 //Chamando a função getMovies para buscar os filmes populares da API do TMDB.
 async function getMovies() {
   const response = await fetch(
-    `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.NEXT_PUBLIC_API_KEY}`
+    `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=pt-BR`
   )
 
   if (!response.ok) {
@@ -19,8 +19,8 @@ async function getMovies() {
   const data = await response.json()
 
   /*Exibindo os resultados no console para verificar se a requisição 
-  está funcionando corretamente.
-  console.log(data.results)*/
+  está funcionando corretamente.*/
+  console.log(data.results)
 
   return data.results
 }
@@ -34,7 +34,7 @@ export default async function Home() {
       <Navbar />
 
       <main className="bg-white min-h-screen p-10 text-black">
-        <h1 className="text-2xl font-bold mb-4 text-center my-2">Filmes em Destaque</h1>
+        <h1 className="text-2xl font-bold mb-4 text-center my-2">Filmes Populares</h1>
 
         <Movies movies={movies} />
       </main>
