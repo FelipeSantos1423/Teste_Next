@@ -11,7 +11,7 @@ import Link from "next/link"
   .join(" • ")
 }
 
-export default async function MovieCard({ movies, genres }) {
+export default function MovieCard({ movies, genres }) {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6 object-cover">
             {movies.map((movie) => (
