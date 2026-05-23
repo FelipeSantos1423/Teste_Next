@@ -1,6 +1,6 @@
 export default function MovieDetails({ movie }) {
   return (
-    <div className="flex flex-col md:flex-row gap-8 lg:gap-12 max-w-5xl lg:max-w-7xl w-full bg-zinc-900 p-6 sm:p-8 lg:p-10 rounded-2xl lg:rounded-3xl shadow-lg lg:shadow-2xl">
+    <div className="flex flex-col md:flex-row gap-8 lg:gap-12 max-w-5xl lg:max-w-7xl w-full bg-zinc-900 p-6 sm:p-8 lg:p-10 rounded-2xl lg:rounded-3xl shadow-lg lg:shadow-2xl mt-6">
 
       <div className="flex justify-center md:justify-start shrink-0">
         <img

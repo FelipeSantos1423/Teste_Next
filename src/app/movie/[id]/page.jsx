@@ -15,6 +15,7 @@ export default async function MovieDetailsCards({ params }) {
         
         <div className="min-h-screen bg-black text-white px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12 flex justify-center items-center">
             <BackButton />
+            
             <MovieDetails movie={movie} />
             
         </div>
