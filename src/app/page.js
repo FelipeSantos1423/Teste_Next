@@ -36,7 +36,9 @@ async function getGenres() {
 }
 
 
+
 export default async function Home() {
+
 
   const movies = await getMovies()
   const genres = await getGenres()
@@ -44,6 +46,11 @@ export default async function Home() {
   return (
     <div>
       <MovieSection movies={movies} genres={genres} />
+
+      
     </div>
+
+    
   )
 }
+
