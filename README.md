@@ -68,13 +68,17 @@ cd Teste_Next
 
 ## Instale as dependências
 
-```bash
+```cmd do VS Code
 npm install
+```
+
+```cmd do VS Code
+npm install @tanstack/react-query
 ```
 
 ## Configure as variáveis de ambiente
 
-Atualize o arquivo `.env.local` na raiz do projeto:
+Crie o arquivo `.env.local` na raiz do projeto:
 
 ```env
 NEXT_PUBLIC_TMDB_API_KEY=2c1b61e4d1a903376ddf530d4742259c
@@ -82,13 +86,13 @@ NEXT_PUBLIC_TMDB_API_KEY=2c1b61e4d1a903376ddf530d4742259c
 
 ## Execute o projeto
 
-```bash
+```cmd do VS Code
 npm run dev
 ```
 
 A aplicação estará disponível em:
 
-```bash
+```cmd do VS Code
 http://localhost:3000
 ```
 
