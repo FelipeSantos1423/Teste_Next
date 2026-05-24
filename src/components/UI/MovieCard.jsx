@@ -1,19 +1,11 @@
-import '../app/globals.css'
+import '../../app/globals.css'
 import Link from "next/link"
 
 /////////////Relacionar Gêneros////////////////////////
 
-  function getGenreName(genreId, genres) {
-    return genreId.map((id) => {
-      const genre = genres.find((g) => g.id === id)
-      return genre ? genre.name : ""
-  })
-  .join(" • ")
-}
-
-export default function MovieCard({ movies, genres }) {
+export default function MovieCard({ movies}) {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6 object-cover">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6 object-cover">
             {movies.map((movie) => (
                <Link key={movie.id} href={`/movie/${movie.id}`}>
                 <div
@@ -27,17 +19,8 @@ export default function MovieCard({ movies, genres }) {
                     <h2 className="text-lg font-bold mb-2 text-white">
                         {movie.title}
                     </h2>
-                    <p className="text-sm text-gray-400 mb-2">
-                        {movie.realese_date}
-                        </p>
-                    <p className="text-sm text-gray-400 mb-2">
+                    <p className="text-sm text-gray-400">
                         {movie.release_date}
-                    </p>
-                    <p className="text-sm text-red-500 mb-2">
-                        {getGenreName(movie.genre_ids, genres)}
-                    </p>
-                   <p className="text-sm text-yellow-400 mb-2">
-                        ⭐ {movie.vote_average.toFixed(1)} / 10 
                     </p>
                 </div>
             </Link>
