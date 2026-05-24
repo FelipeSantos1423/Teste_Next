@@ -81,7 +81,7 @@ npm install @tanstack/react-query
 Crie o arquivo `.env.local` na raiz do projeto:
 
 ```env
-NEXT_PUBLIC_TMDB_API_KEY=2c1b61e4d1a903376ddf530d4742259c
+NEXT_PUBLIC_API_KEY=2c1b61e4d1a903376ddf530d4742259c
 ```
 
 ## Execute o projeto
