@@ -1,11 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0F0F0F;
+  --background: #0A0A0C;
   --foreground: #ffffff;
-  --nav-color: #111111;
-  --card-color: #1C1C1C;
-  --button-color: #E50914;
+  --nav-color: #14151AD9;
+  --card-color: #14151A;
 }
 
 @theme inline {
@@ -18,11 +17,10 @@
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0F0F0F;
+    --background: #0A0A0C;
     --foreground: #ffffff;
-    --nav-color: #111111;
-    --card-color: #1C1C1C;
-    --button-color: #E50914;
+    --nav-color: #14151A;
+    --card-color: #14151A;
   }
 }
 

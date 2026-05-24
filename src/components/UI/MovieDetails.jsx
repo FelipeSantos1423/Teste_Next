@@ -28,6 +28,10 @@ export default function MovieDetails({ movie }) {
           {movie.genres?.map((g) => g.name).join(" • ")}
         </p>
 
+        <p className="text-lg lg:text-xl text-gray-400">
+          <strong className="text-white">Duração:</strong> {Math.floor(movie.runtime / 60)}h {movie.runtime % 60}m
+        </p>
+
         <p className="text-lg lg:text-xl text-gray-300 leading-relaxed">
           <strong className="text-white">Sinopse:</strong> {movie.overview}
         </p>
