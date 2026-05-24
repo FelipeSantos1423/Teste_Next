@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎬 Catálogo de Filmes
 
-## Getting Started
+Aplicação desenvolvida como teste técnico para vaga de Estágio de Desenvolvedor Front-end Júnior.
 
-First, run the development server:
+O projeto consome a API do TMDb para listar filmes populares, realizar buscas e visualizar detalhes dos filmes.
+
+---
+
+# 🚀 Tecnologias utilizadas
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- TanStack Query
+- TMDb API
+
+---
+
+# 📋 Requisitos implementados
+
+## Setup
+- [x] Projeto criado com Next.js
+- [x] Tailwind CSS configurado
+- [x] TanStack Query configurado
+
+## Página principal (/)
+- [x] Listagem de filmes populares
+- [x] Consumo da API do TMDb
+- [x] Componente reutilizável `MovieCard`
+- [x] Exibição de pôster, título e ano
+- [x] Barra de busca
+- [x] Filtro em tempo real
+
+## Página de detalhes (/movie/[id])
+- [x] Página dinâmica por ID
+- [x] Busca individual do filme
+- [x] Exibição de pôster
+- [x] Exibição de título
+- [x] Exibição de sinopse
+- [x] Exibição da data de lançamento
+
+## Estilização
+- [x] Layout responsivo
+- [x] Interface desenvolvida com Tailwind CSS
+
+## Bônus implementados
+- [ ] Loading spinner
+- [x] Tratamento para buscas sem resultado
+- [ ] Debounce na busca
+- [ ] Paginação / carregar mais
+
+---
+
+# ⚙️ Como executar o projeto
+
+## Clone o repositório
+
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+```
+
+## Acesse a pasta do projeto
+
+```bash
+cd seu-repositorio
+```
+
+## Instale as dependências
+
+```bash
+npm install
+```
+
+## Configure as variáveis de ambiente
+
+Crie um arquivo `.env.local` na raiz do projeto:
+
+```env
+NEXT_PUBLIC_TMDB_API_KEY=sua_chave
+```
+
+## Execute o projeto
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A aplicação estará disponível em:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+# 🔌 API utilizada
 
-To learn more about Next.js, take a look at the following resources:
+TMDb (The Movie Database)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+https://www.themoviedb.org/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+# 📱 Responsividade
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+O projeto foi desenvolvido para funcionar em dispositivos desktop e mobile.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+# 👨‍💻 Autor
+
+Felipe dos Santos Pinto
