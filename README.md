@@ -57,13 +57,13 @@ O projeto consome a API do TMDb para listar filmes populares, realizar buscas e 
 ## Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/FelipeSantos1423/Teste_Next.git
 ```
 
 ## Acesse a pasta do projeto
 
 ```bash
-cd seu-repositorio
+cd Teste_Next
 ```
 
 ## Instale as dependências
@@ -74,10 +74,10 @@ npm install
 
 ## Configure as variáveis de ambiente
 
-Crie um arquivo `.env.local` na raiz do projeto:
+Atualize o arquivo `.env.local` na raiz do projeto:
 
 ```env
-NEXT_PUBLIC_TMDB_API_KEY=sua_chave
+NEXT_PUBLIC_TMDB_API_KEY=2c1b61e4d1a903376ddf530d4742259c
 ```
 
 ## Execute o projeto
